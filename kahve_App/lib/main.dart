@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
 void main() {
   runApp(Came());
 }
@@ -30,36 +31,59 @@ class Came extends StatelessWidget {
                 ),
                 Text(
                   "Deneme",
-                  style: GoogleFonts.akronim(
-                      fontSize: 35, color: Colors.white),
+                  style: GoogleFonts.akronim(fontSize: 35, color: Colors.white),
                 ),
-
                 Container(
-                  margin: EdgeInsets.symmetric(
-                    horizontal: 23,
-                  ),
-                  padding: EdgeInsets.all(10.0),
-                  color: Colors.black,
-                  child: Row(
-                    children: [
-                      Icon(Icons.email,size: 50,color: Colors.white,),
-                      SizedBox(width: 23,),
-                      Text("ahmet@outlook.com",style: TextStyle(color: Colors.white,fontSize: 20),)
-                    ],
-                  ),
+                  width: 270,
+                    child:
+                    Divider(height: 30,color: Colors.white,)
                 ),
-                SizedBox(height: 25,),
-                Container(
+                Card(
                   color: Colors.black,
                   margin: EdgeInsets.symmetric(horizontal: 23),
-                  padding: EdgeInsets.all(10.0),
-                  child: Row(
-                    children: [
-                      Icon(Icons.settings_cell,color: Colors.white,size: 50),
-                      SizedBox(width: 60,),
-                      Text("05236577318",style: TextStyle(fontSize: 20,color: Colors.yellowAccent),)
-                    ],
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: ListTile(
+                      leading: Icon(
+                        Icons.email,
+                        color: Colors.yellowAccent,
+                      ),
+                      title: Text("ahmet@outlook.com",style: TextStyle(color: Colors.red,fontSize: 20.0)),
+                    ),
                   ),
+                ),
+                SizedBox(
+                  height: 25,
+                ),
+                Card(
+                  color: Colors.black,
+                  margin: EdgeInsets.symmetric(horizontal: 23),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: ListTile(
+                      leading: Icon(
+                        Icons.phone,
+                        color: Colors.yellowAccent,
+                      ),
+                      title: Text("054312723",style: TextStyle(color: Colors.red,fontSize: 20.0)),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: 10,
+                  height: 10,
+                ),
+                Card(
+                  color: Colors.red,
+                  margin: EdgeInsets.symmetric(horizontal: 23),
+                  child: ListTile(
+                     leading: Icon(
+                         Icons.confirmation_num_sharp,
+                         color: Colors.black
+                     ),
+                    title: Text("Selam",style: TextStyle(fontSize: 30)),
+                  ),
+
                 )
               ],
             ),
@@ -69,3 +93,15 @@ class Came extends StatelessWidget {
     );
   }
 }
+
+/*
+Row(
+
+children: [
+Icon(Icons.settings_cell,color: Colors.white,size: 50),
+SizedBox(width: 60,),
+Text("05236577318",style: TextStyle(fontSize: 20,color: Colors.yellowAccent),)
+],
+),
+
+ */
