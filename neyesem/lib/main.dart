@@ -57,9 +57,9 @@ class _yemeksayfasiState extends State<yemeksayfasi> {
   List<String> tatlilar = [
     "Sütlaç",
     "Süpangle",
-    "Ekmek kadayıfı"
-    "Fındıklı"
-    "Limonlu"
+    "Şekerli",
+    "Supangle",
+    "Evet"
   ];
 
   void rastgele() {
@@ -77,14 +77,14 @@ class _yemeksayfasiState extends State<yemeksayfasi> {
         children: [
           Expanded(
               child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: TextButton(
-                style: ButtonStyle(
-                    overlayColor: MaterialStateProperty.all(Colors.cyan),
-                    backgroundColor: MaterialStateProperty.all(Colors.red)),
-                onPressed: rastgele,
-                child: Image.asset('images/corba_$corbanosu.jpg')),
-          )),
+                padding: const EdgeInsets.all(8.0),
+                child: TextButton(
+                    style: ButtonStyle(
+                        overlayColor: MaterialStateProperty.all(Colors.cyan),
+                        backgroundColor: MaterialStateProperty.all(Colors.red)),
+                    onPressed: rastgele,
+                    child: Image.asset('images/corba_$corbanosu.jpg')),
+              )),
           Text(CorbaAdlari[corbanosu-1], style: TextStyle(fontSize: 20)),
           Container(
               width: 100,
@@ -94,29 +94,29 @@ class _yemeksayfasiState extends State<yemeksayfasi> {
               )),
           Expanded(
               child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: TextButton(
-                style: ButtonStyle(
-                    overlayColor: MaterialStateProperty.all(Colors.limeAccent),
-                    backgroundColor: MaterialStateProperty.all(Colors.black)),
-                onPressed: rastgele,
-                child: Image.asset('images/yemek_$bulgur.jpg')),
-          )),
+                padding: const EdgeInsets.all(8.0),
+                child: TextButton(
+                    style: ButtonStyle(
+                        overlayColor: MaterialStateProperty.all(Colors.limeAccent),
+                        backgroundColor: MaterialStateProperty.all(Colors.black)),
+                    onPressed: rastgele,
+                    child: Image.asset('images/yemek_$bulgur.jpg')),
+              )),
           Text(bulgurlar[bulgur-1],style: TextStyle(fontSize: 20)),
           Container(
             width: 100,
-              child: Divider(color: Colors.blue,height: 10,),),
+            child: Divider(color: Colors.blue,height: 10,),),
           Expanded(
               child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: TextButton(
-                style: ButtonStyle(
-                    backgroundColor:
+                padding: const EdgeInsets.all(8.0),
+                child: TextButton(
+                    style: ButtonStyle(
+                        backgroundColor:
                         MaterialStateProperty.all(Colors.blueAccent),
-                    overlayColor: MaterialStateProperty.all(Colors.green)),
-                onPressed: rastgele,
-                child: Image.asset('images/tatli_$tatli.jpg')),
-          )),
+                        overlayColor: MaterialStateProperty.all(Colors.green)),
+                    onPressed: rastgele,
+                    child: Image.asset('images/tatli_$tatli.jpg')),
+              )),
           Text(tatlilar[tatli-1],style: TextStyle(fontSize: 20),),
         ],
       ),
